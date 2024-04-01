@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+
+  "name": "Aibnb Price Fix",
+  "description": "Fixes the airbnb price listing to show the actual nightly price",
+  "version": "1.0",
+
+  "action": {
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/vendor.js", "js/content_script.js"]
+    }
+  ],
+
+  "permissions": ["storage"],
+
+  "host_permissions": ["<all_urls>"]
+}
